@@ -11,7 +11,9 @@ class GitIssueView extends EditorView
   constructor: (opt) ->
     super
     {@issues} = opt
-    issueList = @issues.map (iss) -> JSON.stringify iss
+    issueList = @issues
+      .sort (a,b) -> +a.number - +b.number
+      .map (iss) -> "##{iss.number}: #{iss.title}"
     @setText issueList.join "\n"
   getTitle: -> 'GitHub Issues'
   getUri: -> 'github-issues://list'

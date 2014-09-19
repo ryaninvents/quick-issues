@@ -51,4 +51,4 @@ module.exports =
       atom.workspace.registerOpener (uri) ->
         return unless uri.match /^github-issues:/
         new GitIssueView
-          issues: issues.map((iss)->iss.title)
+          issues: issues
