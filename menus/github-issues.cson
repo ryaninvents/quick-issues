@@ -1,0 +1,11 @@
+'menu': [
+  {
+    'label': 'Packages',
+    'submenu': [
+      'label': 'GitHub Issues'
+      'submenu': [
+        {'label':'Issues','command':'github-issues:list'}
+      ]
+    ]
+  }
+]
