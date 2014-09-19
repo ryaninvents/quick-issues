@@ -24,6 +24,7 @@
   "dependencies": {
     "baconjs": "^0.7.22",
     "lodash": "^2.4.1",
-    "request": "^2.44.0"
+    "request": "^2.44.0",
+    "marked": "~0.3.2"
   }
 }
