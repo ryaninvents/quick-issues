@@ -42,6 +42,8 @@ module.exports =
     atom.workspaceView.command 'github-issues:list', ->
       if isGitHubRepo()
         atom.workspace.open 'github-issues://list'
+      else
+        alert 'The current project does not appear to be a GitHub repo.'
     fetchIssues (err, issues) ->
       if err then console.error err
       atom.workspace.registerOpener (uri) ->
