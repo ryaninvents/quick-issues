@@ -14,9 +14,7 @@ getOriginUrl = -> atom.project.getRepo().getOriginUrl()
 
 isGitHubRepo = ->
   return false unless getOriginUrl()
-  console.log getOriginUrl()
   m = getOriginUrl().match GH_REGEX
-  console.log m
   if m
     {
       user: m[3]
@@ -32,7 +30,6 @@ fetchIssues = (callback) ->
     else
       try
         issues = JSON.parse body
-        console.log issues
         callback null, issues
       catch err
         console.log 'ERR', body
@@ -42,7 +39,6 @@ module.exports =
   configDefaults:
     username: ''
   activate: ->
-    console.log issuesUrl isGitHubRepo()
     atom.workspaceView.command 'github-issues:list', ->
       if isGitHubRepo()
         atom.workspace.open 'github-issues://list'
