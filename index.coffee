@@ -8,7 +8,7 @@ request = request.defaults
 GH_REGEX = /^(https:\/\/|git@)github\.com(\/|:)([-\w]+)\/([-\w]+)\.git$/
 
 issuesUrl = (info) ->
-  "https://api.github.com/repos/#{info.user}/#{info.repo}/issues"
+  "https://api.github.com/repos/#{info.user}/#{info.repo}/issues?state=all"
 
 getOriginUrl = -> atom.project.getRepo().getOriginUrl()
 
