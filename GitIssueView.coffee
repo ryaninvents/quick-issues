@@ -19,6 +19,8 @@ class GitIssueView extends View
     super
     console.log opt
     {@issues} = opt
+    unless @issues.sort? and @issues.map?
+      @issues = []
     issueList = @issues
       .sort (a,b) ->
         return statusToInt(a) - statusToInt(b) if a.state isnt b.state

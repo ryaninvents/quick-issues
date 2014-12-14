@@ -10,7 +10,7 @@ GH_REGEX = /^(https:\/\/|git@)github\.com(\/|:)([-\w]+)\/([-\w]+)\.git$/
 issuesUrl = (info) ->
   "https://api.github.com/repos/#{info.user}/#{info.repo}/issues?state=all"
 
-getOriginUrl = -> atom.project.getRepo().getOriginUrl()
+getOriginUrl = -> atom.project.getRepo()?.getOriginUrl() or null
 
 isGitHubRepo = ->
   return false unless getOriginUrl()
@@ -45,7 +45,9 @@ module.exports =
       else
         alert 'The current project does not appear to be a GitHub repo.'
     fetchIssues (err, issues) ->
-      if err then console.error err
+      if err
+        console.error err
+        alert 'Error opening issues. Is this a public GitHub project?'
       atom.workspace.registerOpener (uri) ->
         return unless uri.match /^github-issues:/
         new GitIssueView
