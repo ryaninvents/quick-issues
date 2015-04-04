@@ -28,6 +28,7 @@
     "baconjs": "^0.7.22",
     "lodash": "^2.4.1",
     "request": "^2.44.0",
-    "marked": "~0.3.2"
+    "marked": "~0.3.2",
+    "atom-space-pen-views": "^2.0.3"
   }
 }

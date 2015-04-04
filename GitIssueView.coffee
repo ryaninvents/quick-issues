@@ -1,4 +1,5 @@
-{$$, EditorView, View} = require 'atom'
+{$$} = require 'atom-space-pen-views'
+{EditorView, View} = require 'atom'
 marked = require 'marked'
 _ = require 'lodash'
 
