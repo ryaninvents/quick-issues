@@ -39,7 +39,7 @@ class GitIssueView extends View
       issueList.forEach (issue) =>
         @find('[data-element="issue-list"]').append("<div class=block>#{issue}</div>")
     else
-      @find('[data-element="issue-list"]').append "<h2 class=section-heading>No issues found</h2>"
+      @find('[data-element="issue-list"]').append "<h2 class=section-heading>No issues found</h2><h4>Please note that <tt>github-issues</tt> doesn't list issues for private repos."
 
   getTitle: -> 'GitHub Issues'
   getUri: -> 'github-issues://list'
