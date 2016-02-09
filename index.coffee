@@ -10,11 +10,11 @@ GH_REGEX = /^(https:\/\/|git@)github\.com(\/|:)([-\w]+)\/([-\w]+)(\.git)?$/
 issuesUrl = (info) ->
   "https://api.github.com/repos/#{info.user}/#{info.repo}/issues?state=all"
 
-getOriginUrl = -> atom.project.getRepo()?.getOriginUrl() or null
+getOriginURL = -> atom.project.getRepositories()[0]?.getOriginURL() or null
 
 isGitHubRepo = ->
-  return false unless getOriginUrl()
-  m = getOriginUrl().match GH_REGEX
+  return false unless getOriginURL
+  m = getOriginURL().match GH_REGEX
   if m
     {
       user: m[3]
@@ -39,7 +39,7 @@ module.exports =
   configDefaults:
     username: ''
   activate: ->
-    atom.workspaceView.command 'github-issues:list', ->
+    atom.commands.add 'atom-workspace', 'github-issues:list', ->
       if isGitHubRepo()
         atom.workspace.open 'github-issues://list'
       else
@@ -48,7 +48,7 @@ module.exports =
       if err
         console.error err
         alert 'Error opening issues. Is this a public GitHub project?'
-      atom.workspace.registerOpener (uri) ->
+      atom.workspace.addOpener (uri) ->
         return unless uri.match /^github-issues:/
         new GitIssueView
           issues: issues
