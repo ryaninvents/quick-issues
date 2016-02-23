@@ -13,7 +13,7 @@ issuesUrl = (info) ->
 getOriginURL = -> atom.project.getRepositories()[0]?.getOriginURL() or null
 
 isGitHubRepo = ->
-  return false unless getOriginURL
+  return false unless getOriginURL()
   m = getOriginURL().match GH_REGEX
   if m
     {
