@@ -31,7 +31,7 @@ class GitIssueView extends View
           <a href="#{issue.html_url}">##{issue.number}: #{issue.title}</a>
         </h2>
         <div>
-          #{(marked issue.body) or ''}
+          #{(marked(issue.body || '')) or ''}
         </div>
         """
     if issueList.length
