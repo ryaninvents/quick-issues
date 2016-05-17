@@ -3,7 +3,7 @@ request = require 'request'
 
 request = request.defaults
   headers:
-    'User-Agent': 'baconscript/github-issues'
+    'User-Agent': 'r24y/github-issues'
 
 GH_REGEX = /^(https:\/\/|git@)github\.com(\/|:)([-\w]+)\/([-\w]+)(\.git)?$/
 
