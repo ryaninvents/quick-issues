@@ -1,0 +1,24 @@
+extends: ['eslint:recommended', 'plugin:react/recommended', google]
+plugins:
+    - react
+    - babel
+parserOptions:
+  ecmaVersion: 8
+  sourceType: module
+  ecmaFeatures:
+      jsx: true
+env:
+  node: true
+  es6: true
+# Most of these globals I don't want to have to define, but there seems
+# to be no `atom` env for eslint.
+globals:
+  document: false
+  atom: false
+rules:
+  # It's a personal project, I'm not concerned.
+  require-jsdoc: off
+  valid-jsdoc: off
+  max-len: off
+  # Permit Flow type comments.
+  spaced-comment: [error, always, {markers: [':', '::', 'flow-include']}]

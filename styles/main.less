@@ -1,7 +1,117 @@
+@import 'ui-variables';
+
 .github-issues {
-  overflow-y: scroll;
-  .section-heading.issue-closed{
-    text-decoration: line-through;
-    opacity: 0.7;
-  }
+    overflow-y: scroll;
+    .section-heading.issue-closed{
+        text-decoration: line-through;
+        opacity: 0.7;
+    }
+    
+    .issue-list-toolbar, .breadcrumbs {
+        background-color: @tool-panel-background-color;
+        margin: @component-padding;
+        padding: @component-padding;
+    }
+    
+    .breadcrumbs {
+        h2 {
+            margin: 0;
+        }
+    }
+    
+    .issue-list-toolbar {
+        border: 1px solid @tool-panel-border-color;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        
+        .left-hand {
+            flex: 2 0;
+        }
+        .right-hand {
+            flex: 1 0;
+            text-align: right;
+            .btn, select {
+                display: inline-block;
+            }
+            .ico-btn {
+                padding: 0;
+                > .icon::before {
+                    transform: translate(0.18em, 0.18em);
+                }
+            }
+        }
+    }
+    
+    ol.list-group {
+        margin: @component-padding;
+        background: @app-background-color;
+        > li.two-lines {
+            border: 1px solid @pane-item-border-color;
+            color: @text-color;
+            background: @pane-item-background-color;
+            padding: @component-padding;
+            white-space: normal;
+            
+            .primary-line {
+                font-size: 1.5em;
+            }
+            
+            
+            .icon {
+                &.issue-state-open::before {
+                    color: @text-color-success;
+                }
+                &.issue-state-closed {
+                    text-decoration: line-through;
+                    ::before {
+                        color: @text-color-error;
+                    }
+                }
+            }
+            
+            &:not(:first-child) {
+                margin-top: -1px;
+            }
+            .secondary-line {
+                color: @text-color-subtle;
+            }
+        }
+    }
+    
+    .single-issue-view {
+        margin: @component-padding;
+        padding: @component-padding;
+        background: @app-background-color;
+        border: 1px solid @pane-item-border-color;
+        color: @text-color;
+        background: @pane-item-background-color;
+        .issue-body {
+            article {
+                max-width: 120rem;
+                
+                img {
+                    max-width: 100%;
+                }
+                
+                a:hover {
+                    text-decoration: none;
+                }
+                
+                p {
+                    margin-bottom: @component-icon-padding;
+                    text-indent: @component-icon-size;
+                }
+                
+                blockquote {
+                    font-size: @font-size;
+                    margin-bottom: @component-icon-padding;
+                    p {
+                        font-size: @font-size;
+                        text-indent: 0;
+                    }
+                }
+            }
+        }
+    }
 }
