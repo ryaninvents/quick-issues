@@ -2,9 +2,9 @@
 
 Quickly view GitHub issues for the currently opened project.
 
-![](./docs/issues-list.png)
+![](https://r24y.github.io/github-issues/docs/issues-list.png)
 
-![](./docs/issue-view.png)
+![](https://r24y.github.io/github-issues/docs/issue-view.png)
 
 ## Use
 
