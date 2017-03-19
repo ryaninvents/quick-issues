@@ -1,6 +1,6 @@
 {
   "name": "github-issues",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "description": "GitHub issue tracking from within Atom.",
   "main": "lib/index",
   "scripts": {
