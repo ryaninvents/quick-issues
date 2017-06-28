@@ -1,6 +1,6 @@
 {
   "name": "quick-issues",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "Issue tracking within Atom.",
   "main": "src/index",
   "scripts": {
