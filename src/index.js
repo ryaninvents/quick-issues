@@ -2,7 +2,7 @@ import GhIssuesView from './gh-issues-view';
 import {CompositeDisposable} from 'atom';
 import config from './config';
 
-const GH_ISSUES_RE = /^github-issues:\/\//;
+const GH_ISSUES_RE = /^quick-issues:\/\//;
 
 module.exports = {
 
@@ -19,7 +19,7 @@ module.exports = {
 
     // Register command that opens this view
     this.subscriptions.add(atom.commands.add('atom-workspace', {
-      'github-issues:open': () => this.open(),
+      'quick-issues:open': () => this.open(),
     }));
 
     atom.workspace.addOpener((uri) => {
@@ -42,7 +42,7 @@ module.exports = {
   },
 
   open() {
-    atom.workspace.open('github-issues:///');
+    atom.workspace.open('quick-issues:///');
   },
 
 };

@@ -1,7 +1,7 @@
 {
-  "name": "github-issues",
+  "name": "quick-issues",
   "version": "0.8.3",
-  "description": "GitHub issue tracking from within Atom.",
+  "description": "Issue tracking from within Atom.",
   "main": "lib/index",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,7 +16,7 @@
     "atom"
   ],
   "activationCommands": {
-    "atom-workspace": "github-issues:open"
+    "atom-workspace": "quick-issues:open"
   },
   "author": "Ryan Kennedy <me@r24y.com>",
   "license": "MIT",

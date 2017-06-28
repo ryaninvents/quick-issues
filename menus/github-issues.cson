@@ -2,9 +2,9 @@
   {
     'label': 'Packages',
     'submenu': [
-      'label': 'GitHub'
+      'label': 'Quick Issues'
       'submenu': [
-        {'label':'Issues dashboard','command':'github-issues:open'}
+        {'label':'Issues dashboard','command':'quick-issues:open'}
       ]
     ]
   }
