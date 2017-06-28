@@ -53,9 +53,8 @@ export default class IssuesList extends React.Component {
         this.setState({filter});
     }
     renderIssuesList() {
-        const {issues, err, activeIssue, noReposAvailable, filter} = this.state;
-        const isLoading = Boolean(!issues && !err);
-        if (isLoading) {
+        const {issues, fetching, err, activeIssue, noReposAvailable, filter} = this.state;
+        if (fetching) {
             return (
                 <ul className="background-message centered">
                     <li>Fetching issues...</li>
@@ -95,7 +94,7 @@ export default class IssuesList extends React.Component {
                         issue={issue}
                         key={issue.id}
                         onClick={this.makeFollower(
-                            ['GitHub Issues', `Issue #${issue.number}`],
+                            ['Quick Issues', `Issue #${issue.number}`],
                             issue
                         )}
                     />
