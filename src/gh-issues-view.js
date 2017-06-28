@@ -1,3 +1,4 @@
+/** @babel */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import IssuesList from './components/issues-list';

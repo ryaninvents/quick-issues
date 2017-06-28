@@ -1,3 +1,4 @@
+/** @babel */
 import React, {PropTypes} from 'react';
 
 export default class Breadcrumbs extends React.Component {

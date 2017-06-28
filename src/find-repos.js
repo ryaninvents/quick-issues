@@ -1,3 +1,4 @@
+/** @babel */
 import * as urlUtils from 'url';
 
 export default async function findReposInWorkspace() {

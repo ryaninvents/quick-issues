@@ -1,3 +1,4 @@
+/** @babel */
 import React from 'react';
 
 export default class IssueItem extends React.Component {

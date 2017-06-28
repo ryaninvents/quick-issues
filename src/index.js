@@ -1,3 +1,4 @@
+/** @babel */
 import GhIssuesView from './gh-issues-view';
 import {CompositeDisposable} from 'atom';
 import config from './config';

@@ -1,3 +1,4 @@
+/** @babel */
 import React from 'react';
 import IssueItem from './issue-item';
 import IssueListToolbar from './issue-list-toolbar';

@@ -1,3 +1,4 @@
+/** @babel */
 import request from 'request-promise';
 import {format as urlFormat, parse as urlParse} from 'url';
 

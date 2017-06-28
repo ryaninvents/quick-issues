@@ -1,3 +1,4 @@
+/** @babel */
 export default {
     userToken: {
         title: 'User token',

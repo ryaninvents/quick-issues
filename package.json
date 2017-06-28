@@ -2,7 +2,7 @@
   "name": "quick-issues",
   "version": "0.8.3",
   "description": "Issue tracking from within Atom.",
-  "main": "lib/index",
+  "main": "src/index",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
