@@ -1,6 +1,6 @@
 {
   "name": "github-issues",
-  "version": "0.8.3",
+  "version": "0.8.4",
   "description": "DEPRECATED: Install `quick-issues` instead.",
   "main": "src/index",
   "scripts": {
