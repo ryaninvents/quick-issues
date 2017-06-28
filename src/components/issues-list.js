@@ -15,7 +15,7 @@ export default class IssuesList extends React.Component {
         this.state = {
             fetching: true,
             filter: atom.config.get(`${pkg.name}.displayOptions.defaultFilter`),
-            path: ['GitHub Issues'],
+            path: ['Quick Issues'],
         };
         this.reload = this.reload.bind(this);
         this.follow = this.follow.bind(this);

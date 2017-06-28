@@ -8,7 +8,7 @@ export default class GhIssuesView {
   constructor(serializedState) {
     // Create root element
     this.element = document.createElement('div');
-    this.element.classList.add('github-issues');
+    this.element.classList.add('quick-issues');
     ReactDOM.render(React.createElement(IssuesList), this.element);
   }
 
@@ -25,11 +25,11 @@ export default class GhIssuesView {
   }
 
   getTitle() {
-      return 'GitHub Issues';
+      return 'Quick Issues';
   }
 
   getUri() {
-      return 'github-issues:///';
+      return 'quick-issues:///';
   }
 
 }

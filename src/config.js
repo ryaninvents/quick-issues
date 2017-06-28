@@ -13,7 +13,7 @@ export default {
         properties: {
             defaultFilter: {
                 title: 'Default filter',
-                description: 'Default filter to apply when GitHub Issues is loaded.',
+                description: 'Default filter to apply when Quick Issues is loaded.',
                 type: 'string',
                 default: 'open',
                 enum: [
