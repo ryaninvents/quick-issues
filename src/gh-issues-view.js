@@ -32,6 +32,9 @@ export default class GhIssuesView {
       return 'quick-issues:///';
   }
 
+  getDefaultLocation() {
+      return 'right';
+  }
 }
 
 GhIssuesView.Provider = (view) => view.element;
