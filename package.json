@@ -1,7 +1,7 @@
 {
-  "name": "quick-issues",
+  "name": "github-issues",
   "version": "0.8.3",
-  "description": "Issue tracking from within Atom.",
+  "description": "DEPRECATED: Install `quick-issues` instead.",
   "main": "src/index",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
