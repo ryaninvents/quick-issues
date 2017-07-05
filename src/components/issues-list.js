@@ -20,6 +20,7 @@ export default class IssuesList extends React.Component {
         this.reload = this.reload.bind(this);
         this.follow = this.follow.bind(this);
         this.handleFilterSelect = this.handleFilterSelect.bind(this);
+        this.clearFilter = this.clearFilter.bind(this);
     }
     componentWillMount() {
         this.reload();
@@ -52,6 +53,11 @@ export default class IssuesList extends React.Component {
     handleFilterSelect(filter) {
         this.setState({filter});
     }
+
+    clearFilter() {
+        this.setState({filter: 'all'});
+    }
+
     renderIssuesList() {
         const {issues, fetching, err, activeIssue, noReposAvailable, filter} = this.state;
         if (fetching) {
@@ -102,6 +108,25 @@ export default class IssuesList extends React.Component {
             </ol>
         );
     }
+
+
+    renderFilterMessage() {
+        if (this.state.filter === 'all') {
+            return null;
+        }
+
+        const {filter} = this.state;
+
+        return (
+            <atom-panel className="padded">
+                <div className="inset-panel padded">
+                    Showing only {filter} issues. <a className="text-info" onClick={this.clearFilter}>Show all instead</a>
+                </div>
+            </atom-panel>
+        );
+    }
+
+
     render() {
         const {path, fetching, filter, issueCount} = this.state;
 
@@ -118,6 +143,7 @@ export default class IssuesList extends React.Component {
                     />
                 )}
                 {this.renderIssuesList()}
+                {this.renderFilterMessage()}
             </div>
         );
     }
