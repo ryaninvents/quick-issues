@@ -2,9 +2,9 @@
 
 Quickly view GitHub issues for the currently opened project.
 
-![](https://r24y.github.io/quick-issues/docs/issues-list.png)
+![](./docs/issues-list.png)
 
-![](https://r24y.github.io/quick-issues/docs/issue-view.png)
+![](./docs/issue-view.png)
 
 ## Use
 
@@ -19,3 +19,7 @@ use the filter dropdown to limit the issues listed.
 
 `quick-issues` now supports viewing issues attached to private repos.
 Full instructions are available in the "Preferences" pane for this package.
+
+### API Token - Permissions
+Your API Token needs the following Permissions:
+![required api token Permissions](./docs/token-permissions.png)
