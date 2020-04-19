@@ -21,7 +21,7 @@
   "author": "nanigasi-san <nanigasi.py@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/r24y/quick-issues/issues"
+    "url": "https://github.com/nanigasi-san/quick-issues/issues"
   },
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
