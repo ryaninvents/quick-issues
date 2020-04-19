@@ -1,14 +1,14 @@
 {
-  "name": "quick-issues",
-  "version": "0.9.3",
-  "description": "Issue tracking within Atom.",
+  "name": "quick-issues-2",
+  "version": "0.0.0",
+  "description": "Issue tracking within Atom. Extension version of [quick-issues](https://github.com/r24y/quick-issues)",
   "main": "src/index",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/r24y/quick-issues.git"
+    "url": "https://github.com/nanigasi-san/quick-issues.git"
   },
   "keywords": [
     "github",
@@ -16,9 +16,9 @@
     "atom"
   ],
   "activationCommands": {
-    "atom-workspace": "quick-issues:open"
+    "atom-workspace": "quick-issues-2:toggle"
   },
-  "author": "Ryan Kennedy <me@r24y.com>",
+  "author": "nanigasi-san <nanigasi.py@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/r24y/quick-issues/issues"
@@ -26,7 +26,6 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "homepage": "https://github.com/r24y/quick-issues",
   "dependencies": {
     "marked": "~0.3.2",
     "react": "^15.4.2",
