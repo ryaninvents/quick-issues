@@ -21,7 +21,6 @@ module.exports = {
     // Register command that opens this view
     this.subscriptions.add(atom.commands.add('atom-workspace', {
       'quick-issues-2:toggle': () => this.toggle(),
-      'quick-issues-2:close': () => this.close(),
     }));
 
     atom.workspace.addOpener((uri) => {
@@ -44,11 +43,17 @@ module.exports = {
   },
 
   toggle() {
-    atom.workspace.open('quick-issues-2:///');
-  },
-
-  close() {
-    atom.workspace.hide('quick-issues-2:///');
+    const exists = (element) => element instanceof GhIssuesView;
+    if (atom.workspace.getRightDock().getPaneItems().some(exists)) {
+      if (atom.workspace.getRightDock().isVisible()) {
+        atom.workspace.getRightDock().hide();
+      } else {
+        atom.workspace.getRightDock().show();
+      }
+    } else {
+      this.views.pop(0);
+      atom.workspace.open('quick-issues-2:///');
+    }
   },
 
 };
