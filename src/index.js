@@ -43,7 +43,7 @@ module.exports = {
   },
 
   toggle() {
-    atom.workspace.toggle('quick-issues:///');
+    atom.workspace.toggle('quick-issues-2:///');
   },
 
 };
