@@ -21,6 +21,7 @@ module.exports = {
     // Register command that opens this view
     this.subscriptions.add(atom.commands.add('atom-workspace', {
       'quick-issues-2:toggle': () => this.toggle(),
+      'quick-issues-2:close': () => this.close(),
     }));
 
     atom.workspace.addOpener((uri) => {
@@ -43,7 +44,11 @@ module.exports = {
   },
 
   toggle() {
-    atom.workspace.toggle('quick-issues-2:///');
+    atom.workspace.open('quick-issues-2:///');
+  },
+
+  close() {
+    atom.workspace.hide('quick-issues-2:///');
   },
 
 };
